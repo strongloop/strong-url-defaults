@@ -1,0 +1,36 @@
+{
+  "name": "strong-url-defaults",
+  "description": "provide defaults for URLs",
+  "author": "Sam Roberts <sam@strongloop.com>",
+  "license": {
+    "name": "Dual Artistic/StrongLoop",
+    "url": "https://github.com/strongloop/strong-url-defaults/blob/master/LICENSE.md"
+  },
+  "version": "1.0.0-1",
+  "main": "index.js",
+  "keywords": [
+    "StrongLoop",
+    "strongloop"
+  ],
+  "homepage": "https://github.com/strongloop/strong-url-defaults",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/strong-url-defaults.git"
+  },
+  "bugs": {
+    "url": "https://github.com/strongloop/strong-url-defaults/issues"
+  },
+  "scripts": {
+    "lint": "eslint *.js; jscs *.js",
+    "test": "tap test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^0.15.1",
+    "jscs": "^1.11.3",
+    "tap": "~0.7.0"
+  },
+  "engine": {
+    "node": ">=0.10.0"
+  }
+}
