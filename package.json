@@ -21,7 +21,7 @@
     "url": "https://github.com/strongloop/strong-url-defaults/issues"
   },
   "scripts": {
-    "lint": "eslint *.js; jscs *.js",
+    "lint": "eslint *.js && jscs *.js",
     "test": "tap test.js"
   },
   "dependencies": {},
