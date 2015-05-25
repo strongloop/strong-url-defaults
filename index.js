@@ -20,6 +20,7 @@ function normalize(url, defaults, overrides) {
   set('path', 'pathname');
   set('host', 'hostname');
   set('port', 'port');
+  set('protocol', 'protocol');
 
   _.slashes = true; // So we always get them
 

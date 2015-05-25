@@ -23,6 +23,7 @@ so it can't be "defaulted".
 
 Overrides can be any of:
 
+- `protocol`
 - `host`
 - `port`
 - `path`
