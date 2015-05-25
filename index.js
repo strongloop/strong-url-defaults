@@ -11,7 +11,7 @@ function normalize(url, defaults, overrides) {
   overrides = overrides || {};
 
   function set(from, to) {
-    if (overrides[from])
+    if (from in overrides)
       _[to] = overrides[from];
     else
       _[to] = _[to] || defaults[from];
@@ -21,6 +21,7 @@ function normalize(url, defaults, overrides) {
   set('host', 'hostname');
   set('port', 'port');
   set('protocol', 'protocol');
+  set('auth', 'auth');
 
   _.slashes = true; // So we always get them
 

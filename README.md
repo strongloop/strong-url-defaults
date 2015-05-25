@@ -17,6 +17,7 @@ Defaults can be any of:
 
 - `host`
 - `port`
+- `auth`
 
 Its not possible to distinguish with `url.parse()` whether a path was supplied,
 so it can't be "defaulted".
@@ -27,3 +28,4 @@ Overrides can be any of:
 - `host`
 - `port`
 - `path`
+- `auth`

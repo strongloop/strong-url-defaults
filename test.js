@@ -97,6 +97,16 @@ test(
   {protocol: 'ws', path: '/channel'});
 test(
   'http://TOKEN@example.com',
+  'ws://example.com:8701/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', auth: null, path: '/channel'});
+test(
+  'http://OTHER@example.com',
   'ws://TOKEN@example.com:8701/channel',
   {host: 'localhost', port: 8701},
+  {protocol: 'ws', auth: 'TOKEN', path: '/channel'});
+test(
+  'http://example.com',
+  'ws://TOKEN@example.com:8701/channel',
+  {host: 'localhost', port: 8701, auth: 'TOKEN'},
   {protocol: 'ws', path: '/channel'});
