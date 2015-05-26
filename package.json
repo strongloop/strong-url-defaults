@@ -28,7 +28,7 @@
   "devDependencies": {
     "eslint": "^0.18.0",
     "jscs": "^1.11.3",
-    "tap": "~0.7.0"
+    "tap": "^1.1.0"
   },
   "engine": {
     "node": ">=0.10.0"

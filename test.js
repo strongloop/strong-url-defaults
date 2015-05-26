@@ -75,3 +75,38 @@ test(
   'http://example.com:80/api',
   {host: 'localhost', port: 8701},
   {path: '/api'});
+test(
+  'http:',
+  'ws://localhost:8701/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', path: '/channel'});
+test(
+  'http://example.com',
+  'ws://example.com:8701/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', path: '/channel'});
+test(
+  'http://example.com:80',
+  'ws://example.com:80/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', path: '/channel'});
+test(
+  'http://:80',
+  'ws://localhost:80/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', path: '/channel'});
+test(
+  'http://TOKEN@example.com',
+  'ws://example.com:8701/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', auth: null, path: '/channel'});
+test(
+  'http://OTHER@example.com',
+  'ws://TOKEN@example.com:8701/channel',
+  {host: 'localhost', port: 8701},
+  {protocol: 'ws', auth: 'TOKEN', path: '/channel'});
+test(
+  'http://example.com',
+  'ws://TOKEN@example.com:8701/channel',
+  {host: 'localhost', port: 8701, auth: 'TOKEN'},
+  {protocol: 'ws', path: '/channel'});
