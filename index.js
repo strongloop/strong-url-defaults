@@ -10,6 +10,9 @@ function normalize(url, defaults, overrides) {
 
   overrides = overrides || {};
 
+  if (_.pathname === '/')
+    delete _.pathname; // So we don't get trailing '/' on URLs
+
   function set(from, to) {
     if (from in overrides)
       _[to] = overrides[from];
@@ -24,9 +27,6 @@ function normalize(url, defaults, overrides) {
   set('auth', 'auth');
 
   _.slashes = true; // So we always get them
-
-  if (_.pathname === '/')
-    delete _.pathname; // So we don't get trailing '/' on URLs
 
   delete _.host; // So .hostname and .port are used to format the URL
 

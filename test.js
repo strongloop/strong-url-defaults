@@ -110,3 +110,42 @@ test(
   'ws://TOKEN@example.com:8701/channel',
   {host: 'localhost', port: 8701, auth: 'TOKEN'},
   {protocol: 'ws', path: '/channel'});
+test(
+  'http://',
+  'http://localhost/fu',
+  {host: 'localhost', path: 'fu'});
+test(
+  'http://',
+  'http://localhost/fu',
+  {host: 'localhost', path: '/fu'});
+test(
+  'http:///',
+  'http://localhost/fu',
+  {host: 'localhost', path: '/fu'});
+test(
+  'http:///bar',
+  'http://localhost/bar',
+  {host: 'localhost', path: '/fu'});
+test(
+  'http://host/',
+  'http://host/fu',
+  {host: 'localhost', path: '/fu'});
+test(
+  'http://host/bar',
+  'http://host/bar',
+  {host: 'localhost', path: '/fu'});
+test(
+  'http:///',
+  'http://localhost/fu',
+  {host: 'localhost'},
+  {path: '/fu'});
+test(
+  'http:///bar',
+  'http://localhost/fu',
+  {host: 'localhost'},
+  {path: '/fu'});
+test(
+  'http://x/bar',
+  'http://x/fu',
+  {host: 'localhost'},
+  {path: '/fu'});
