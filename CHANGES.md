@@ -1,3 +1,9 @@
+2015-07-07, Version 1.2.0
+=========================
+
+ * Support path replacement better (Sam Roberts)
+
+
 2015-06-03, Version 1.1.0
 =========================
 
