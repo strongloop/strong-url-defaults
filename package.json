@@ -3,7 +3,7 @@
   "description": "provide defaults for URLs",
   "author": "Sam Roberts <sam@strongloop.com>",
   "license": "Artistic-2.0",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "index.js",
   "keywords": [
     "StrongLoop",
